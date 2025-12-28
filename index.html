@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sana Minik Bir Sürpriz 💌</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    font-family:Poppins, sans-serif;
+}
+
+body{
+    margin:0;
+    min-height:100svh;
+    background:linear-gradient(lightpink, white);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+/* ORTA KUTULAR */
+.screen{
+    background:white;
+    padding:30px;
+    border-radius:22px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+    max-width:420px;
+    width:90%;
+}
+
+.hidden{display:none}
+
+button{
+    margin-top:10px;
+    background:deeppink;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:25px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#ff1493;
+}
+
+/* 🐼 PANDA */
+#pandaWrap{
+    position:relative;
+    margin-bottom:15px;
+}
+
+#panda{
+    font-size:70px;
+}
+
+#pandaBubble{
+    position:absolute;
+    top:-20px;
+    left:60px;
+    background:white;
+    padding:6px 12px;
+    border-radius:15px;
+    font-size:12px;
+    box-shadow:0 2px 6px gray;
+    display:none;
+    white-space:nowrap;
+}
+
+/* GALERİ */
+.gallery{
+    display:flex;
+    flex-direction:column;
+    gap:24px;
+    margin-top:20px;
+}
+
+.photoCard{
+    background:white;
+    border-radius:22px;
+    padding:16px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+    text-align:left;
+}
+
+.date{
+    font-size:14px;
+    font-weight:600;
+    color:deeppink;
+    margin-bottom:10px;
+}
+
+.photoCard img{
+    width:100%;
+    border-radius:16px;
+    margin-bottom:12px;
+}
+
+.note{
+    font-size:14px;
+    color:#444;
+    line-height:1.6;
+    margin-bottom:8px;
+}
+
+.quote{
+    font-size:13px;
+    font-style:italic;
+    color:#777;
+}
+</style>
+</head>
+
+<body>
+
+<!-- 🔒 KİLİT -->
+<div id="lock" class="screen">
+    <div id="pandaWrap">
+        <div id="panda">🐼</div>
+        <div id="pandaBubble"></div>
+    </div>
+
+    <p>Sana Minik Bir Sürpriz 🤍</p>
+    <input type="password" id="password" placeholder="Şifre" style="width:100%;padding:12px;border-radius:16px;border:1px solid #ddd;">
+    <button onclick="checkPassword()">Aç</button>
+</div>
+
+<!-- 🎀 ARA -->
+<div id="intro" class="screen hidden">
+    <h2>Hazır mısın Kocammmm? 💖</h2>
+    <button onclick="openSite()">Evetttt</button>
+</div>
+
+<!-- 💖 ANA -->
+<div id="content" class="screen hidden">
+    <h1>İyi ki Doğdun Bitanemmm 🤍</h1>
+    <p>29 Aralık</p>
+
+    <div class="gallery">
+
+        <div class="photoCard">
+            <div class="date">18 Ekim 2025 🤍</div>
+            <img src="images/ozgur1.jpg">
+            <p class="note">
+                Bugün seni izlerken içim çok huzurluydu.
+                Sonraki gün gidecek olsan da yine de iyi zaman geçirmiştik.
+                Umarım en yakın zamanda yine buna benzer zamanlar geçirebiliriz bitanem.
+            </p>
+            <p class="quote">
+                “Bazı insanlar konuşmadan da iyi hissettirir, sen de onlardan birisin benim için.”
+            </p>
+        </div>
+
+        <div class="photoCard">
+            <div class="date"> 18 Ekim 2025 🤍</div>
+            <img src="images/ozgur2.jpg">
+            <p class="note">
+                Yanındayken zamanın nasıl geçtiğini anlamıyorum.
+                Keşke her gün böyle olsa.Keşke her gün beraber olabilsek yavrum.
+            </p>
+            <p class="quote">
+                “Mutluluk bazen sadece birlikte susabilmektir.”
+            </p>
+        </div>
+
+        <div class="photoCard">
+            <div class="date">18 Ekim 2025 🤍</div>
+            <img src="images/ozgur3.jpg">
+            <p class="note">
+                O gün ne kadar da hızlı geçmişti. Erken dönmek zorunda kalmıştık ama buna değdi bence.
+                Seninle 1 dakika bile geçirsek kötü olan her şeyden uzaklaşmama yetiyor bitanem.
+                Her zaman birlikte yan yana olalım.
+            </p>
+            <p class="quote">
+                “Her anımı hatırlanmaya değer kıldığın için teşekkür ederim bitanem.”
+            </p>
+        </div>
+
+        <div class="photoCard">
+            <div class="date">18 Ekim 2025 🤍</div>
+            <img src="images/ozgur4.jpg">
+            <p class="note">
+                Sana bu hediyeleri verirken masaya sığmamıştın ve paketi yırtmamaya çalışıyodun seni öyle
+                görmek çok tatlıydı.
+            </p>
+            <p class="quote">
+                “Sen her şeyin en iyisine layıksın bitanem bunu aklından çıkarma. Kendini en değersiz hissettiğin 
+                zamanlarda hep yanındayım.”
+            </p>
+        </div>
+
+                <div class="photoCard">
+            <div class="date">18 Ekim 2025 🤍</div>
+            <img src="images/ozgur5.jpg">
+            <p class="note">
+                Bazı ilkleri seninle beraber yaşadık hayatım umarım da yaşamaya devam ederiz.
+                (Burda üştüme kahve dökmüştün unuttum sanma öcümü alıcam nvdvnsn).
+            </p>
+            <p class="quote">
+                “ Her zaman dediğim gibi bitanem Ne olursa olsun senden vazgeçmeyeceğim.”
+            </p>
+        </div>
+
+                <div class="photoCard">
+            <div class="date">18 Ekim 2025 🤍</div>
+            <img src="images/ozgur6.jpg">
+            <p class="note">
+                Esiden ne kadar ne yaşamış olsak da bizi birbirimizden ayıramadı yavrum bundan
+                sonra da ayıramaz.
+            </p>
+            <p class="quote">
+                “Seviyorum seni sincapımmm.”
+            </p>
+        </div>
+
+                <div class="photoCard">
+            <div class="date">18 Ekim 2025 🤍</div>
+            <img src="images/ozgur7.jpg">
+            <p class="note">
+                Sadece bir sözle buraya kadar geldik.Umarım bundan sonrası hayal edemeyeceğimiz kadar 
+                güzel devam eder yavrum.
+            </p>
+            <p class="quote">
+                “Bu böyle gitmez biliyosun de mi.”
+            </p>
+        </div>
+
+                        <div class="photoCard">
+            <div class="date">18 Ekim 2025 🤍</div>
+            <img src="images/ozgur8.jpg">
+            <p class="note">
+                'Ben bu kızla evlenicemmmm'.
+            </p>
+            <p class="quote">
+                “Ya yavrum anneme uyku sersemiyle söylenmişim.”
+            </p>
+        </div>
+
+                        <div class="photoCard">
+            <div class="date">18 Ekim 2025</div>
+            <img src="images/ozgur9.jpg">
+            <p class="note">
+                Ne kadar uzakta olursak olalım her zaman yan yanaymışız gibi hissettirdiğin için
+                teşekkür ederim bitanem.
+            </p>
+            <p class="quote">
+                “Mesafelerin en kısa zamanda yok olması dileğiyle bitanemm.”
+            </p>
+        </div>
+
+                        <div class="photoCard">
+            <div class="date">18 Ekim 2025</div>
+            <img src="images/ozgur10.jpg">
+            <p class="note">
+                'Bi kahveee'.
+            </p>
+            <p class="quote">
+                “Yeniden deneyelim mi.”
+            </p>
+        </div>
+
+    </div>
+
+    <p style="margin-top:20px">Bu site sadece bizim için Balımmm 💌 <br><br>
+        "Hayatım, aşkımmm, balımmm, bitanemmm, seninle her şey bambaşka bir anlam kazanıyor.
+        Yanında olduğumda tüm karmaşalar yok oluyor içime tarifsiz bir huzur doluyor. Senin 
+        gülüşünü görmek, sesini duymak, yanımda olduğunu bilmek bana öyle bir güven veriyor 
+        ki... sanki hayatın bütün güzel yanları bir araya gelmiş benim için bir şey hazırlamış
+        gibi hissediyorum. 
+        <br>
+        <br>
+        Sen sadece benim için bir sevgili değilsin; sen benim en büyük destekçim,  en güvenli
+        sığınağım, en güzel tesadüfümsün. Seni düşündükçe kalbim yanımdaymışsın gibi atıyor,
+        her küçük anımı seninle paylaşmak istiyorum. Seninle geçirdiğim her saniye, her 
+        konuşmamız, her bakışın... hepsi benim için çok özel ve kıymetli.
+        <br>
+        <br>
+        Sana olan sevgim o kadar derin ki kelimeler yetmiyor ama bilmeni istiyorum ki; ne
+        olursa olsun yanında olacağım, seninle güleceğim, seninle ağlayacağım, seninle 
+        hayaller kuracağım ve her zaman seninle olmanın mutluluğunu yaşayacağım. Sen benim
+        huzurumsun, neşemsin, nefesimsin, attığım her adımda destekçimsin ve her geçen gün 
+        hayata bağlanma sebebimsin.
+        <br>
+        <br>
+        Bazen sana olan sevgimi belli edemesem de dile getiremesem de seni ne kadar sevdiğimi
+        asla unutma bitanem. Her adımmında yanındayım her sıkıntında da yanındayım. Başımıza
+        gelen her zorluğu birlikte aşacağız bitanem. İnşallah ileride beraber yapmayı 
+        düşündüğümüz her şeyi yapma fırsatımız olur bitanem. İnşallah ileride kurmak istediğimiz
+        hayatı en ince ayrıntısına kadar kurabiliriz. Bunları başarmak için her zaman seninle
+        olacağım ve elini tutacağım yavrumm bundan şüphen olmasın.
+        Doğum gününde yanında olmayı o kadar isterdim ki keşke olabilseydim de.Ama bu biraz
+        da olsa yanında olmamın sıcaklığını sana yaşatabilmiştir. Umarım en yakın zamanda
+        yan yana geliriz bitanemmm. Bundan sonraki bütün doğum günlerinde ellerin ellerimde
+        olur inşallah bitanem.
+        <br>
+        <br>
+        Seviyorummm Seniii Hem de Tahmin Edemeyeceğin Kadar Çokkkk."
+    </p>
+</div>
+
+<script>
+const lock = document.getElementById("lock");
+const intro = document.getElementById("intro");
+const content = document.getElementById("content");
+
+const pandaBubble = document.getElementById("pandaBubble");
+const passwordInput = document.getElementById("password");
+
+/* 🐼 sadece baloncuk */
+passwordInput.addEventListener("input",()=>{
+    if(passwordInput.value.length > 0){
+        pandaBubble.innerText = "şşşşttt 🤫";
+        pandaBubble.style.display = "block";
+    }else{
+        pandaBubble.style.display = "none";
+    }
+});
+
+function checkPassword(){
+    if(passwordInput.value === "ozgurbusraozbek"){
+        pandaBubble.innerText = "Tamamdır 💖";
+        pandaBubble.style.display = "block";
+
+        setTimeout(()=>{
+            lock.classList.add("hidden");
+            intro.classList.remove("hidden");
+            pandaBubble.style.display = "none";
+        },1200);
+    }else{
+        pandaBubble.innerText = "Olmadııı...";
+        pandaBubble.style.display = "block";
+
+        setTimeout(()=>{
+            pandaBubble.style.display = "none";
+            passwordInput.value = "";
+        },1500);
+    }
+}
+
+function openSite(){
+    intro.classList.add("hidden");
+    content.classList.remove("hidden");
+}
+</script>
+
+</body>
+</html>
